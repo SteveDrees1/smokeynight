@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    outline: none;
+}
+@font-face {
+    font-family: "space";
+    src: local("SpaceQuest-yOY3"), url("../public/fonts/SpaceQuest-yOY3.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff;
+    display: block;
+    font: 14px/1.3 Arial, sans-serif;
+    height: 50px;
+    position: relative;
+    z-index: 5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    color: whitesmoke;
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    font-size: 4rem;
+    font-family: space;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    font-stretch: ultra-expanded;
+    animation-name: glowAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 1000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+    margin-top: 30px;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+header h2 {
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header a, a:visited {
+    text-decoration: none;
+    color: #fcfcfc;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-webkit-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-moz-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-ms-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-webkit-keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-moz-keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-ms-keyframes move-clouds-back {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+.stars, .twinkling, .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url("../public/img/stars.png") repeat top center;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url("../public/img/twinkling.png") repeat top center;
+    z-index: 1;
+    -moz-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url("../public/img/clouds3.png") repeat top center;
+    z-index: 3;
+    -moz-animation: move-clouds-back 200s linear infinite;
+    -o-animation: move-clouds-back 200s linear infinite;
+    -webkit-animation: move-clouds-back 200s linear infinite;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: block;
+    z-index: 75;
+    position: relative;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.fire {
+    animation: animation 1s ease-in-out infinite alternate;
+    -moz-animation: animation 1s ease-in-out infinite alternate;
+    -webkit-animation: animation 1s ease-in-out infinite alternate;
+    -o-animation: animation 1s ease-in-out infinite alternate;
+}
+
+.burn {
+    animation: animation .65s ease-in-out infinite alternate;
+    -moz-animation: animation .65s ease-in-out infinite alternate;
+    -webkit-animation: animation .65s ease-in-out infinite alternate;
+    -o-animation: animation .65s ease-in-out infinite alternate;
+}
+
+@keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #feec85,
+        -20px -20px 40px #ffae34,
+        20px -40px 50px #ec760c,
+        -20px -60px 60px #cd4606,
+        0 -80px 70px #973716,
+        10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #fefcc9,
+        -20px -20px 40px #feec85,
+        22px -42px 60px #ffae34,
+        -22px -58px 50px #ec760c,
+        0 -82px 80px #cd4606,
+        10px -90px 80px #973716;
+    }
+}
+
+@-moz-keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #feec85,
+        -20px -20px 40px #ffae34,
+        20px -40px 50px #ec760c,
+        -20px -60px 60px #cd4606,
+        0 -80px 70px #973716,
+        10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #fefcc9,
+        -20px -20px 40px #feec85,
+        22px -42px 60px #ffae34,
+        -22px -58px 50px #ec760c,
+        0 -82px 80px #cd4606,
+        10px -90px 80px #973716;
+    }
+}
+
+@-webkit-keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #feec85,
+        -20px -20px 40px #ffae34,
+        20px -40px 50px #ec760c,
+        -20px -60px 60px #cd4606,
+        0 -80px 70px #973716,
+        10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #fefcc9,
+        -20px -20px 40px #feec85,
+        22px -42px 60px #ffae34,
+        -22px -58px 50px #ec760c,
+        0 -82px 80px #cd4606,
+        10px -90px 80px #973716;
+    }
+}
+
+@-o-keyframes animation {
+    0% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #feec85,
+        -20px -20px 40px #ffae34,
+        20px -40px 50px #ec760c,
+        -20px -60px 60px #cd4606,
+        0 -80px 70px #973716,
+        10px -90px 80px #451b0e;
+    }
+    100% {
+        text-shadow: 0 0 20px #fefcc9,
+        10px -10px 30px #fefcc9,
+        -20px -20px 40px #feec85,
+        22px -42px 60px #ffae34,
+        -22px -58px 50px #ec760c,
+        0 -82px 80px #cd4606,
+        10px -90px 80px #973716;
+    }
+}
+
+/****************** MUI ICONS ***************/
+.MuiSvgIcon-root {
+    width: 2em !important;
+    height: 2em !important;
+    color: white;
+}
+
+.MuiSvgIcon-root:hover {
+    cursor: pointer;
+}
+
+.accountIcon {
+    float: right;
 }
