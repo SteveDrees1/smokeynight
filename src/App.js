@@ -9,18 +9,19 @@ function App() {
         <div>
             <div>
                 <h1>
-                    <span className="fire">S</span>
-                    <span className="burn">T</span>
+                    <span className="fire">L</span>
+                    <span className="burn">O</span>
+                    <span className="burn">N</span>
                     <span className="burn">E</span>
-                    <span className="burn">V</span>
-                    <span className="fire">E</span>
+                    <span className="burn">L</span>
+                    <span className="fire">Y</span>
                     <span>&nbsp;</span>
-                    <span className="fire">D</span>
-                    <span className="burn">R</span>
+                    <span className="fire">P</span>
+                    <span className="burn">L</span>
+                    <span className="burn">A</span>
+                    <span className="burn">N</span>
                     <span className="burn">E</span>
-                    <span className="burn">E</span>
-                    <span className="fire">S</span>
-
+                    <span className="fire">T</span>
                 </h1>
                 <nav>
                     <MenuIcon/>

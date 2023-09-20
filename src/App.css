@@ -23,15 +23,14 @@ header {
 }
 
 h1 {
-    color: whitesmoke;
+    color: grey;
     position: absolute;
-    top: 45%;
-    left: 32%;
-    font-size: 4rem;
-    font-family: space;
+    top: 37%;
+    left: 6%;
+    font-size: 11rem;
+    font-family: space, serif;
     font-weight: 400;
     letter-spacing: 1rem;
-    font-stretch: ultra-expanded;
     animation-name: glowAnimation;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -173,17 +172,17 @@ nav {
 }
 
 .fire {
+    animation: animation 5s ease-in-out infinite alternate;
+    -moz-animation: animation 5s ease-in-out infinite alternate;
+    -webkit-animation: animation 5s ease-in-out infinite alternate;
+    -o-animation: animation 5s ease-in-out infinite alternate;
+}
+
+.burn {
     animation: animation 1s ease-in-out infinite alternate;
     -moz-animation: animation 1s ease-in-out infinite alternate;
     -webkit-animation: animation 1s ease-in-out infinite alternate;
     -o-animation: animation 1s ease-in-out infinite alternate;
-}
-
-.burn {
-    animation: animation .65s ease-in-out infinite alternate;
-    -moz-animation: animation .65s ease-in-out infinite alternate;
-    -webkit-animation: animation .65s ease-in-out infinite alternate;
-    -o-animation: animation .65s ease-in-out infinite alternate;
 }
 
 @keyframes animation {
@@ -274,7 +273,7 @@ nav {
 .MuiSvgIcon-root {
     width: 2em !important;
     height: 2em !important;
-    color: white;
+    color: #ec760c;
 }
 
 .MuiSvgIcon-root:hover {
